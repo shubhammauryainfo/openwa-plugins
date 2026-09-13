@@ -1,0 +1,9 @@
+|-- .gitignore
+|-- auto-reply.zip
+|-- CHANGELOG.md
+|-- index.ts
+|-- manifest.json
+|-- package-lock.json
+|-- package.json
+|-- README.md
+|-- tsconfig.json

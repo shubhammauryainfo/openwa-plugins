@@ -1,0 +1,14 @@
+{
+    "name": "openwa-assistant-message",
+    "private": true,
+    "version": "0.1.0",
+    "scripts": {
+        "build": "tsc",
+        "check": "node --check dist/index.js",
+        "test": "node --test"
+    },
+    "devDependencies": {
+        "tsx": "^4.20.3",
+        "typescript": "^5.9.2"
+    }
+}

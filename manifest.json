@@ -1,0 +1,61 @@
+{
+    "id": "assistant-message",
+    "name": "Assistant Message",
+    "version": "0.1.0",
+    "type": "extension",
+    "main": "dist/index.js",
+    "description": "Uses the Gemini API to answer inbound WhatsApp messages as an assistant.",
+    "author": "Local",
+    "license": "MIT",
+    "permissions": [
+        "messages:send",
+        "net:fetch"
+    ],
+    "net": {
+        "allow": [
+            "generativelanguage.googleapis.com:443"
+        ]
+    },
+    "sessionScoped": true,
+    "sessions": [
+        "*"
+    ],
+    "hooks": [
+        "message:received"
+    ],
+    "status": "development",
+    "minOpenWAVersion": "0.9.0",
+    "testedOpenWAVersion": "0.23.4",
+    "configSchema": {
+        "type": "object",
+        "properties": {
+            "trigger": {
+                "type": "string",
+                "default": "",
+                "title": "Trigger",
+                "description": "Optional message prefix that activates the assistant. Empty answers every direct message."
+            },
+            "apiKey": {
+                "type": "string",
+                "required": true,
+                "title": "Gemini API key",
+                "description": "Create one at aistudio.google.com/apikey."
+            },
+            "model": {
+                "type": "string",
+                "default": "gemini-2.5-flash",
+                "title": "Gemini model"
+            },
+            "systemPrompt": {
+                "type": "textarea",
+                "default": "You are a helpful, concise WhatsApp assistant. Reply in the same language as the user.",
+                "title": "Assistant instructions"
+            },
+            "respondInGroups": {
+                "type": "boolean",
+                "default": false,
+                "title": "Respond in groups"
+            }
+        }
+    }
+}
