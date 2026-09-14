@@ -1,4 +1,5 @@
 |-- .gitignore
+|-- assistant-message.zip
 |-- auto-reply.zip
 |-- CHANGELOG.md
 |-- index.ts

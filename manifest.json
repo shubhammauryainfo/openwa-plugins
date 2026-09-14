@@ -28,6 +28,9 @@
     "testedOpenWAVersion": "0.23.4",
     "configSchema": {
         "type": "object",
+        "required": [
+            "apiKey"
+        ],
         "properties": {
             "trigger": {
                 "type": "string",
@@ -38,6 +41,7 @@
             "apiKey": {
                 "type": "string",
                 "required": true,
+                "secret": true,
                 "title": "Gemini API key",
                 "description": "Create one at aistudio.google.com/apikey."
             },
